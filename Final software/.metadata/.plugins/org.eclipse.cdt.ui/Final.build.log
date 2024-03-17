@@ -1,0 +1,73 @@
+08:59:44 **** Incremental Build of configuration Debug for project Final ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I"D:/Bart/School/IoT '22 - '23/Projecten van het werkveld/Final software/Final/Drivers/ssd1306" -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../LWIP/App -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/BSP/Components/lan8742 -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/compat/posix -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/net -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/compat/stdc -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'StartMqttTask':
+../Core/Src/main.c:584:11: warning: unused variable 'RotaryValue' [-Wunused-variable]
+  584 |  uint16_t RotaryValue;
+      |           ^~~~~~~~~~~
+../Core/Src/main.c: In function 'StartOledTask':
+../Core/Src/main.c:684:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  684 |   HAL_UART_Transmit(&huart3, index, sizeof(index), 250);
+      |                              ^~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'StartRotaryTask':
+../Core/Src/main.c:710:26: warning: passing argument 1 of 'SetROTvalue' makes integer from pointer without a cast [-Wint-conversion]
+  710 |     SetROTvalue(evt.value.p);
+      |                 ~~~~~~~~~^~
+      |                          |
+      |                          void *
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/global_setters_getters.h:25:27: note: expected 'uint16_t' {aka 'short unsigned int'} but argument is of type 'void *'
+   25 | void SetROTvalue(uint16_t value);
+      |                  ~~~~~~~~~^~~~~
+../Core/Src/main.c:733:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  733 |     HAL_UART_Transmit(&huart3, "Task Rotary\n", sizeof("Task Rotary\n"), 250);
+      |                                ^~~~~~~~~~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+In file included from ../Core/Src/main.c:30:
+../Core/Src/main.c: At top level:
+../Core/Inc/mqtt_global.h:13:13: warning: 'mqtt_connection_cb' declared 'static' but never defined [-Wunused-function]
+   13 | static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
+      |             ^~~~~~~~~~~~~~~~~~
+../Core/Inc/mqtt_global.h:14:13: warning: 'mqtt_sub_request_cb' declared 'static' but never defined [-Wunused-function]
+   14 | static void mqtt_sub_request_cb(void *arg, err_t result);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/mqtt_global.h:15:13: warning: 'mqtt_incoming_publish_cb' declared 'static' but never defined [-Wunused-function]
+   15 | static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/mqtt_global.h:16:13: warning: 'mqtt_incoming_data_cb' declared 'static' but never defined [-Wunused-function]
+   16 | static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/mqtt_global.h:18:13: warning: 'mqtt_pub_request_cb' declared 'static' but never defined [-Wunused-function]
+   18 | static void mqtt_pub_request_cb(void *arg, err_t result);
+      |             ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Bart\School\IoT '22 - '23\Projecten van het werkveld\Final software\Final\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final.elf
+ 
+arm-none-eabi-size   Final.elf 
+arm-none-eabi-objdump -h -S  Final.elf  > "Final.list"
+   text	   data	    bss	    dec	    hex	filename
+ 119752	    172	 109956	 229880	  381f8	Final.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final.list
+ 
+
+08:59:47 Build Finished. 0 errors, 9 warnings. (took 2s.706ms)
+

@@ -1,0 +1,9 @@
+mqtt_global.c:38:6:mqtt_init	3
+mqtt_global.c:81:6:mqtt_connect_broker	1
+mqtt_global.c:115:13:mqtt_connection_cb	3
+mqtt_global.c:153:13:mqtt_sub_request_cb	1
+mqtt_global.c:167:13:mqtt_incoming_publish_cb	6
+mqtt_global.c:189:13:mqtt_incoming_data_cb	13
+mqtt_global.c:278:9:publish_message	2
+mqtt_global.c:293:13:mqtt_pub_request_cb	2
+mqtt_global.c:314:9:Check_client_connected	1

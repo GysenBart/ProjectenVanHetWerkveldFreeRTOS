@@ -1,0 +1,4 @@
+../Core/Src/global_setters_getters.c:30:6:SetETHstate	16	static
+../Core/Src/global_setters_getters.c:39:9:GetETHstate	16	static
+../Core/Src/global_setters_getters.c:50:6:SetROTvalue	16	static
+../Core/Src/global_setters_getters.c:59:10:GetROTvalue	16	static

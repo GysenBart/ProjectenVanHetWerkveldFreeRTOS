@@ -1,0 +1,16 @@
+../Drivers/CMSIS/Include/core_cm4.h:1939:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:96:5:_write	32	static
+../Core/Src/main.c:110:5:main	144	static
+../Core/Src/main.c:207:6:SystemClock_Config	88	static
+../Core/Src/main.c:254:13:MX_IWDG_Init	8	static
+../Core/Src/main.c:282:13:MX_SPI1_Init	8	static
+../Core/Src/main.c:320:13:MX_TIM3_Init	64	static
+../Core/Src/main.c:378:13:MX_USART3_UART_Init	8	static
+../Core/Src/main.c:411:13:MX_GPIO_Init	64	static
+../Core/Src/main.c:552:6:StartDefaultTask	24	static
+../Core/Src/main.c:579:6:StartMqttTask	48	static
+../Core/Src/main.c:647:6:StartOledTask	72	static
+../Core/Src/main.c:699:6:StartRotaryTask	32	static
+../Core/Src/main.c:747:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:764:6:Error_Handler	8	static,ignoring_inline_asm

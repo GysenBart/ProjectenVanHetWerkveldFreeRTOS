@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Final/Core/Inc/global.h&apos; to &apos;global_setters_getters.h&apos;" description="Rename resource &apos;global.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/global.h" name="global_setters_getters.h" stamp="1685268998392" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Final/Core/Src/global.c&apos; to &apos;global_setters_getters.c&apos;" description="Rename resource &apos;global.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/global.c" name="global_setters_getters.c" stamp="1685269009116" updateReferences="true"/>
+</session>

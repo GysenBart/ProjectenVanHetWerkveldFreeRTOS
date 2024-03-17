@@ -1,0 +1,4 @@
+global_setters_getters.c:30:6:SetETHstate	2
+global_setters_getters.c:39:9:GetETHstate	2
+global_setters_getters.c:50:6:SetROTvalue	2
+global_setters_getters.c:59:10:GetROTvalue	2
